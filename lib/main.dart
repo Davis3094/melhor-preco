@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,9 @@ Future<void> main() async {
   Repositorio repo = RepositorioLocal();
   if (usarFirebase) {
     await Firebase.initializeApp(options: opcoes);
+    // Long polling: evita travamentos do canal de streaming em redes/navegadores restritivos.
+    FirebaseFirestore.instance.settings =
+        const Settings(webExperimentalForceLongPolling: true);
     repo = RepositorioFirestore();
     if (popularNaInicializacao) {
       // Em segundo plano: se o banco não existir/estiver bloqueado, o app abre assim mesmo.
