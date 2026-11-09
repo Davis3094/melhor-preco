@@ -52,14 +52,17 @@ flutter test
 flutter run -d edge
 ```
 
-Por padrão o app roda em **modo local**, sem precisar de nuvem.
+O app já vem configurado para o **Cloud Firestore** do projeto Firebase `melhor-preco-97058`, com os dados de exemplo carregados. Basta ter internet para rodar.
 
-### Ativar o Cloud Firestore (modo nuvem)
-1. Crie um projeto em https://console.firebase.google.com.
-2. Adicione um app **Web** e copie as chaves (`apiKey`, `appId`, `messagingSenderId`, `projectId`).
-3. Cole as chaves em `lib/firebase_config.dart` e troque `usarFirebase` para `true`.
-4. No console, crie o banco **Firestore** em modo de teste.
-5. Rode o app e carregue os dados de exemplo uma vez (chame `repositorio.popular()`, por exemplo em um botão temporário ou no `main`).
+Para rodar **sem nuvem** (dados locais de demonstração), abra `lib/firebase_config.dart` e troque `usarFirebase` para `false`.
+
+> O banco está em modo de teste, com regras abertas até **08/12/2026**. Depois dessa data as leituras e gravações deixam de funcionar até que as regras sejam atualizadas ou o app seja executado em modo local.
+
+### Usar outro projeto Firebase
+1. Crie um projeto em https://console.firebase.google.com e adicione um app **Web**.
+2. Cole as chaves (`apiKey`, `appId`, `messagingSenderId`, `projectId` etc.) em `lib/firebase_config.dart`.
+3. No console, crie o banco **Firestore** em modo de teste.
+4. Troque `popularNaInicializacao` para `true`, rode o app uma vez para gravar os dados de exemplo e volte o valor para `false`.
 
 ## 4. Testes
 `flutter test` executa 3 testes: ordenação por menor preço, busca sem acento/caixa e a jornada completa (buscar → comparar).
@@ -76,7 +79,10 @@ lib/
 test/widget_test.dart
 ```
 
-## 6. Roteiro do vídeo (máx. 1 minuto)
+## 6. Vídeo de demonstração
+O vídeo (40 segundos, sem áudio) está em [`demo/demo_o_melhor_preco.mp4`](demo/demo_o_melhor_preco.mp4). Ele mostra o app em funcionamento lendo os dados do Cloud Firestore: pesquisa de produto, comparação de preços ordenada por menor preço ou por distância, destaque do melhor preço e a economia.
+
+### Roteiro previsto (máx. 1 minuto)
 1. (0–10 s) "Esse é o O Melhor Preço. Vou mostrar a jornada do Carlos para achar o supermercado mais barato."
 2. (10–25 s) Digitar "arroz" na busca e mostrar a lista filtrando.
 3. (25–45 s) Abrir o produto e mostrar os preços ordenados, com o selo "Melhor preço" e a economia.
