@@ -33,7 +33,7 @@ Flutter (Web)  ──►  Repositorio (interface)
 - **Frontend:** Flutter 3 / Material 3 (`lib/main.dart`).
 - **Backend e dados:** Cloud Firestore, com coleções `supermercados`, `produtos` e `precos` (`lib/dados/repositorio.dart`).
 - **Dados de exemplo:** 4 supermercados, 6 produtos, 22 preços (`lib/dados/seed.dart`).
-- A interface só conhece a classe `Repositorio`, então trocar entre modo local e nuvem não altera as telas.
+- A interface só conhece a classe `Repositorio`, então trocar entre modo local e nuvem não altera as telas do melhor preço.
 
 ### Modelagem de dados
 | Coleção | Campos |
