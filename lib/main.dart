@@ -116,10 +116,21 @@ class _BuscaPageState extends State<BuscaPage> {
                 TextField(
                   controller: _busca,
                   onChanged: (_) => _pesquisar(),
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     labelText: 'Ex.: arroz, leite, café',
-                    prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(),
+                    prefixIcon: const Icon(Icons.search),
+                    suffixIcon: _busca.text.isNotEmpty
+                        ? IconButton(
+                            icon: const Icon(Icons.clear),
+                            tooltip: 'Limpar pesquisa',
+                            onPressed: () {
+                              _busca.clear();
+                              _pesquisar();
+                              setState(() {});
+                            },
+                          )
+                        : null,
+                    border: const OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 12),
