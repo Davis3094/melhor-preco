@@ -82,6 +82,8 @@ test/widget_test.dart
 ## 6. Vídeo de demonstração
 O vídeo (40 segundos, sem áudio) está em [`demo/demo_o_melhor_preco.mp4`](demo/demo_o_melhor_preco.mp4). Ele mostra o app em funcionamento lendo os dados do Cloud Firestore: pesquisa de produto, comparação de preços ordenada por menor preço ou por distância, destaque do melhor preço e a economia.
 
+A demonstração também permite visualizar como a solução atende à necessidade identificada na jornada do usuário, facilitando a comparação entre os estabelecimentos e ajudando o consumidor a tomar decisões de compra com base nos preços e na distância. Dessa forma, o vídeo evidencia o funcionamento das principais funcionalidades desenvolvidas e a aplicação prática da proposta do projeto.
+
 ### Roteiro previsto (máx. 1 minuto)
 1. (0–10 s) "Esse é o O Melhor Preço. Vou mostrar a jornada do Carlos para achar o supermercado mais barato."
 2. (10–25 s) Digitar "arroz" na busca e mostrar a lista filtrando.
