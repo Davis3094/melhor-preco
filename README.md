@@ -87,4 +87,4 @@ O vídeo (40 segundos, sem áudio) está em [`demo/demo_o_melhor_preco.mp4`](dem
 2. (10–25 s) Digitar "arroz" na busca e mostrar a lista filtrando.
 3. (25–45 s) Abrir o produto e mostrar os preços ordenados, com o selo "Melhor preço" e a economia.
 4. (45–55 s) Alternar para "Mais perto".
-5. (55–60 s) Mostrar o repositório no GitHub e encerrar.
+5. (55–60 s) Mostrar o repositório no GitHub e encerrar. 
