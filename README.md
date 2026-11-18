@@ -18,7 +18,7 @@ Projeto Integrador · Senac EAD · Análise e Desenvolvimento de Sistemas · 202
 
 **Jornada escolhida (Persona 1 – Carlos Silva, etapas 3 a 5 da jornada):** informar localização → pesquisar produto → comparar preços entre supermercados.
 
-**Hipótese da PoC:** o usuário consegue ir de "quero um produto" até "sei qual supermercado tem o menor preço" em menos de 3 telas e em poucos segundos.
+**Hipótese da PoC:** o usuário consegue ir de "quero um produto" até "sei qual supermercado tem o menor preço" em menos de 3 telas e em poucos segundos. O resultado esperado é uma aplicação funcional em que a busca, a comparação e a ordenação reflitam os dados reais do banco.
 
 **Mudança em relação à 1ª entrega (justificada):** a 1ª entrega previa localização por GPS ou CEP. Na PoC a distância é um dado fixo por supermercado, porque a geolocalização não é necessária para validar a hipótese de comparação. GPS/CEP, lista de compras, código de barras e cadastro de supermercados ficam para a versão final.
 
